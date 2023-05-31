@@ -1,5 +1,6 @@
-#timer {
-    display:none;
+@font-face {
+    font-family: digital;
+    src: url(DigitalNumbers-Regular.ttf);
 }
 
 #time-input {
@@ -7,4 +8,48 @@
     width: 5ch;
 }
 
-#timer-container
+.tipbox {
+    margin: 8px;
+    border: 2px solid cornflowerblue;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: lightblue;
+}
+
+#timer {
+    display:none;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#timer-container {
+    border: 8px solid maroon;
+    border-radius: 30px;
+    width: 50vw;
+    min-width: 400px;
+    font-size: 5em;
+    display: block;
+    letter-spacing: 0.25em;
+    text-align: center;
+}
+
+#timer-container code {
+    font-family: digital, monospace;
+}
+
+#timer-button {
+    margin: 16px;
+    clip-path: circle();
+    width: 75px;
+    height: 75px;
+    border: 5px outset goldenrod;
+    border-radius: 50px;
+    background-color: gold;
+}
+
+#total-timer {
+    position: absolute;
+    bottom: 16px;
+}

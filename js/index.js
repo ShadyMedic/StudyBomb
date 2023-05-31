@@ -36,9 +36,12 @@ function setTimer(event) {
                 alert("Invalid input");
                 return;
             }
-            secondsInterval = input[1];
-        case 1: //Fallthrough intentional
             minutesInterval = input[0];
+            secondsInterval = input[1];
+            break;
+        case 1:
+            minutesInterval = input[0];
+            secondsInterval = 0;
             break;
         default:
             alert("Invalid input");
@@ -49,7 +52,7 @@ function setTimer(event) {
     updateTimers(); //Set the initial time to the document so the timer isn't empty
 
     document.getElementById("intro").style = "display: none;";
-    document.getElementById("timer").style = "display: block;";
+    document.getElementById("timer").style = "display: flex;";
 
     timerLoop = setInterval(loop, 1000) //Start the timer after 1 seconds
 }
