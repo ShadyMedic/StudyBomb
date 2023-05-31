@@ -17,6 +17,15 @@ var secondsTotal = 0;
 
 var timerLoop = undefined;
 
+//TODO – youtube is not optimal as it often plays ads (yeah, they are an extra punishment, but come on)
+var punishments = [
+    "https://youtu.be/dQw4w9WgXcQ?autoplay=1",
+    "https://youtu.be/QH2-TGUlwu4?autoplay=1",
+    "https://youtu.be/XqZsoesa55w?t=28&autoplay=1",
+    "https://youtu.be/48rz8udZBmQ?autoplay=1",
+    "https://youtu.be/tVj0ZTS4WF4?t=35&autoplay=1"
+]
+
 function setTimer(event) {
     event.preventDefault();
     let input = document.getElementById("time-input").value;
@@ -123,9 +132,27 @@ function addTime() {
 }
 
 function trigger() {
-    alert("n00b");
     secondsLeft = 0;
     minutesLeft = 0;
+
+    document.getElementById("timer-container").innerHTML = "<span>BOOM!</span>";
+    document.getElementById("timer-button").classList.toggle("hidden");
+    document.getElementById("settings").classList.toggle("hidden");
+    document.getElementById("total-timer").classList.remove("hidden");
+    document.getElementById("total-timer").classList.toggle("small");
+    document.getElementById("total-timer").classList.toggle("big");
+
+    document.getElementById("punishment").play(); //TEMPORARY
+/* TODO Make this work
+    document.getElementById("punishment-placeholder").innerHtml = "<iframe " +
+            "width=\"400\" " +
+            "height=\"300\" " +
+            "src=\"" + punishments[Math.floor(Math.random() * punishments.length)] + "\" " +
+            "allow=\"autoplay\">" +
+        "</iframe>";
+    //window.location = punishments[Math.floor(Math.random() * punishments.length)];
+*/
+
 }
 
 function switchTheme() {

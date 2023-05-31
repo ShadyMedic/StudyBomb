@@ -44,6 +44,14 @@ body {
     display: none!important;
 }
 
+.small {
+    font-size: 0.7em;
+}
+
+.big {
+    font-size: 1.7em;
+}
+
 #time-input {
     font-family: monospace;
     width: 5ch;
@@ -92,6 +100,11 @@ body {
 
 #timer-button:active {
     border-style: inset;
+}
+
+#timer-button:disabled {
+    border: gray;
+    background-color: gray;
 }
 
 #total-timer {
