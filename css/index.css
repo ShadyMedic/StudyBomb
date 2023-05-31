@@ -1,0 +1,10 @@
+#timer {
+    display:none;
+}
+
+#time-input {
+    font-family: monospace;
+    width: 5ch;
+}
+
+#timer-container

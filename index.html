@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Bomb</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <section id="intro">
+        <h1>Welcome to study bomb!</h1>
+        <p>The logic behind this utility is simple.</p>
+        <p>
+            Do you have problems with your attention span? Do you feel the urge to make frequent study breaks while
+            preparing for exams to check your phone, pets, children (lol)?
+        </p>
+        <p>
+            Simply put a subtle pressure upon yourself to discourage your brain from stopping to read your study
+            materials.
+        </p>
+        <p>
+            Make an estimate how much time do you need to read one page of your textbook (or PDF document or anything
+            really). Then set this time in the clock and set them running. Once you finish reading the page, press the
+            button to add the same amount of time to the countdown again.
+        </p>
+        <p>
+            If the time runs out, a randomly selected annoying song will play. This should stress you enough to make you
+            want to avoid the countdown hitting zero.
+        </p>
+        <form id="input-form">
+            <label for="time-input">How much time do you need to read one page on average?</label><br>
+            <span>Use format <code>minutes:seconds</code></span><br>
+            <input id="time-input" type="text" maxlength="5" required/>
+            <input type="submit" value="Set" />
+        </form>
+    </section>
+    <section id="timer">
+        <div id="timer-container">
+            <code id="timer-minutes"></code>
+            <code> : </code>
+            <code id="timer-seconds"></code>
+        </div>
+        <button id="timer-button">Next page</button>
+        <div id="total-timer">
+            <small>You've been studying <code id="total-time"></code> in total.</small>
+        </div>
+    </section>
+</body>
+</html>
