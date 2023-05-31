@@ -35,16 +35,21 @@
         </form>
         <div class="tipbox">TIP: Press F11 to enable full-screen mode and get rid of any unnecessary distractions.</div>
     </section>
-    <section id="timer">
+    <section id="timer" class="hidden">
         <div id="timer-container">
             <code id="timer-minutes"></code>
-            <code>:</code>
+            <code id="timer-minutes-label" class="hidden"> min</code>
+            <code id="timer-colon">:</code>
             <code id="timer-seconds"></code>
         </div>
         <button id="timer-button">Next<br>page</button>
         <div id="total-timer">
             <small>You've been studying <code id="total-time"></code> in total.</small>
         </div>
+    </section>
+    <section id="settings">
+        <button id="theme-button">Switch theme</button>
+        <button id="distractions-button">Minimal distractions mode</button>
     </section>
 </body>
 </html>

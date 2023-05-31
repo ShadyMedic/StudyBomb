@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', event => {
     document.getElementById("input-form").onsubmit = setTimer;
     document.getElementById("timer-button").onclick = addTime;
+    document.getElementById("theme-button").onclick = switchTheme;
+    document.getElementById("distractions-button").onclick = switchDistractions;
 });
 
 var minutesInterval = undefined;
@@ -51,8 +53,8 @@ function setTimer(event) {
     addTime(); //Add the first interval
     updateTimers(); //Set the initial time to the document so the timer isn't empty
 
-    document.getElementById("intro").style = "display: none;";
-    document.getElementById("timer").style = "display: flex;";
+    document.getElementById("intro").classList.toggle("hidden");
+    document.getElementById("timer").classList.toggle("hidden");
 
     timerLoop = setInterval(loop, 1000) //Start the timer after 1 seconds
 }
@@ -124,4 +126,16 @@ function trigger() {
     alert("n00b");
     secondsLeft = 0;
     minutesLeft = 0;
+}
+
+function switchTheme() {
+    document.getElementsByTagName("body")[0].classList.toggle("dark");
+}
+
+function switchDistractions() {
+    document.getElementById("timer-colon").classList.toggle("hidden");
+    document.getElementById("timer-minutes-label").classList.toggle("hidden");
+    document.getElementById("timer-seconds").classList.toggle("hidden");
+    document.getElementById("total-timer").classList.toggle("hidden");
+    document.getElementById("theme-button").classList.toggle("hidden");
 }
